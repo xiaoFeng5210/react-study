@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import _ from "lodash";
+import {SubmitInfoForm} from "./useReducerDoc/index"
 
 // class Square extends Component {
 //   constructor(props) {
@@ -46,10 +47,12 @@ class Board extends Component {
 
   renderSquare(i) {
     return (
-      <Square
+      <div>
+        {/* <Square
         value={this.state.squares[i]}
         emitBoardHandle={() => this.handleClick(i)}
-      />
+      /> */}
+      </div>
     );
   }
 
@@ -88,6 +91,8 @@ class Board extends Component {
           {this.renderSquare(7)}
           {this.renderSquare(8)}
         </div>
+
+        <SubmitInfoForm />
       </div>
     );
   }
